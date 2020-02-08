@@ -1,0 +1,84 @@
+@media screen and (max-width: 900px) {
+	.container {
+		position: fixed;
+	}
+
+	.topBox {
+		width: 90%;
+		padding: 1rem;
+	}
+
+	.textWrap {
+		justify-content: center;
+	}
+
+	.textWrap span {
+		font-size: 2rem;
+	}
+
+	.scoreWrap {
+		padding: 0.5rem 1rem;
+	}
+
+	.playWrap {
+		width: 70%;
+		transform: translateY(-100px);
+	}
+
+	
+
+	.rulesWrap {
+		height: 100vh;
+		width: 100%;
+		background-color: white;
+		flex-direction: column;		
+	}
+
+	.rules {
+		height: 100%;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.textClose {
+		position: absolute;
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 5rem;
+	}
+
+	.chosen {
+		transform: scale(0.8);
+		left: 0;
+	}
+
+	.computer {
+		transform: scale(0.8);
+		right: 0;
+	}
+
+	.theHouse {
+		width: 150%;
+		text-align: center;
+	}
+
+	.playAgain {
+		bottom: 0;
+		margin-bottom: -4rem;
+	}
+
+	.playIcon:hover .hoverPulse {
+		animation-play-state: paused;
+	}
+}
+
+@media screen and (max-height: 600px) {
+	.playWrap {
+		margin-top: 5rem;
+	}
+
+	.playIcon {
+		transform: scale(0.7);
+	}
+}

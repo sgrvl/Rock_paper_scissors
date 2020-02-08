@@ -14,10 +14,11 @@ function rules(){
 const icon = document.getElementsByClassName('playIcon');
 const triangle = document.getElementsByClassName('playWrap')[0];
 const pulse = document.getElementsByClassName('hoverPulse')[0];
-const pick = document.getElementsByClassName('yourPick')[0];
 const result = document.getElementsByClassName('result')[0];
 const playAgain = document.getElementsByClassName('playAgain')[0];
 var score = document.getElementById('score');
+const youPicked = document.getElementsByClassName('youPicked');
+const theHouse = document.getElementsByClassName('theHouse');
 var s = 0;
 
 function choose(play){
@@ -36,13 +37,13 @@ function choose(play){
 	if (play == 2) { //rock
 		icon[2].classList.add('chosen');
 		icon[1].classList.add('hidden');
-		icon[0].classList.add('hidden');
+		icon[0].classList.add('hidden');		
 	}
 
 	triangle.style.background = 'transparent';
 	pulse.style.animationPlayState = 'paused';
-	pick.style.opacity = '1';
 	playAgain.style.opacity = '1';
+	youPicked[play].style.opacity = '1';	
 
 	var computer = (Math.floor(Math.random()*3));
 
@@ -99,18 +100,19 @@ function choose(play){
 	if (play == 2 && computer == 2) { //tie
 		result.innerHTML = "TIE";
 	}
+	theHouse[computer].style.opacity = '1';
 
 	score.innerHTML = s;
 
-	playAgain.addEventListener('click', function(){
+	document.getElementsByClassName('btn')[0].addEventListener('click', function(){
 		
 		triangle.style.background = '';
 		pulse.style.animationPlayState = '';
-		pick.style.opacity = '';
 		playAgain.style.opacity = '';
-
-		for(let i=0; i<=icon.length; i++){
-			icon[i].classList.remove('chosen','hidden','computer');
+		youPicked[play].style.opacity = '';
+		
+		for (var e of icon) {
+			e.classList.remove('chosen','hidden','computer');
 		}
 	});	
 }
