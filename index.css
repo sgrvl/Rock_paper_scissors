@@ -227,7 +227,7 @@
 	background: transparent;
 }
 
-.rulesWrap {
+/*.rulesWrap {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -236,7 +236,7 @@
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.7);
-}
+}*/
 
 .textClose {
 	width: 100%;
@@ -260,8 +260,6 @@
 .rules {
 	height: 100%;
 	padding: 2rem;
-	height: 21vw;
-	width: 21vw;
 	border-radius: 10px;
 	background-color: white;
 	display: flex;
