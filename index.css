@@ -227,16 +227,16 @@
 	background: transparent;
 }
 
-/*.rulesWrap {
-	position: absolute;
+.rulesWrap {
+	/*position: absolute;
 	height: 100%;
 	width: 100%;
-	z-index: 999;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.7);
-}*/
+	background-color: rgba(0, 0, 0, 0.7);*/
+	z-index: 999;
+}
 
 .textClose {
 	width: 100%;
