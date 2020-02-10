@@ -3,10 +3,10 @@ var c = 0; // open/close counter
 
 function rules(){
 	if (c == 0) {
-		rulesWrap.classList.add('rulesOpacity');
-		c++;
-	} else {
 		rulesWrap.classList.remove('rulesOpacity');
+		c++;
+	} else {		
+		rulesWrap.classList.add('rulesOpacity');
 		c--;
 	}
 }
